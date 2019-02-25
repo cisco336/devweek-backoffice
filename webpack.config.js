@@ -6,7 +6,10 @@ const config = {
     entry: './src/app/index.js',
     output:{
         path: path.join(__dirname, 'dist'),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        
+        // Se agrega para prevenir el error 'Cannot get / url'
+        publicPath: '/'
     },
     module:{
         rules:[
@@ -14,10 +17,20 @@ const config = {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: {
-                    loader:'babel-loader'
+                    loader:'babel-loader',
                 }
-            }
-        ]
+            },
+            // Agregado para permitir la utilización de .scss
+            {
+                test: /\.scss$/,
+                loaders: ["style-loader", "css-loader", "sass-loader"]
+            },
+        ],
+    },
+
+    // Se agrega para prevenir el error 'Cannot get / url'
+    devServer: {
+        historyApiFallback: true,
     },
     plugins:[
         new HtmlWebpackPlugin({
@@ -26,3 +39,4 @@ const config = {
     ]
 }
 module.exports = config
+

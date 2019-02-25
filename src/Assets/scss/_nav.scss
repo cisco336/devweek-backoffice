@@ -1,0 +1,25 @@
+nav {
+    &.navbar {
+        padding: 0;
+    }
+    &.navbar-brand {
+        font-variant: small-caps;
+    }
+    a, ul {
+        margin: 0 1rem;
+    }
+    & ul {
+        & li {
+            list-style: none;
+            display: inline-block;
+            padding: 0 1rem;
+            border-right: 1px solid rgba(black, .2);
+            cursor: pointer;
+    
+            &:last-child {
+                border: none;
+                padding-right: 0;
+        }
+    }
+    }
+}
