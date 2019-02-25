@@ -5,20 +5,33 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import '../Assets/scss/styles.scss';
 
 // Components
-import Main from './Pages/main'
-import DashboardNav from './Pages/Dashboard/dashboard';
+import DashboardHeader from './Pages/Dashboard/dashboard-header';
+import DashboardNav from './Pages/Dashboard/dashboard-nav';
+import Statistics from './Pages/Dashboard/components/statistics';
+import Speakers from './Pages/Dashboard/components/speakers';
+import Event from './Pages/Dashboard/components/event';
 
 class App extends Component{
 
     render(){
         return(
-            <DashboardNav />
-            // <BrowserRouter>
-            //     <Switch>
-            //         <Route path="/" component={Main} exact/>
-            //         <Route path="/dashboard" component={Dashboard} />
-            //     </Switch>
-            // </BrowserRouter>
+            <div className="wrapper">
+                <DashboardHeader />
+                <div className="wrapper__grid">
+                    <section className="wrapper__grid--nav">
+                        <DashboardNav />
+                    </section>
+                    <section className="wrapper__grid--content">
+                        <BrowserRouter>
+                            <Switch>
+                                <Route path="/" component={Statistics} exact/>
+                                <Route path="/speakers" component={Speakers} exact/>
+                                <Route path="/events" component={Event}exact/>
+                            </Switch>
+                        </BrowserRouter>
+                    </section>
+                </div>    
+            </div>
         )
     }
 }
