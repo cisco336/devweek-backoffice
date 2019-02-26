@@ -8,9 +8,13 @@ class DashboardHeader extends React.Component {
                     <span className="navbar-brand" href="#">Title</span>
                         <ul>
                             <li>
-                                <small>
-                                    Welcome "user"
-                                </small>
+                                <i className="far fa-bell" />
+                            </li>
+                            <li>
+                                <i className="far fa-envelope" />
+                            </li>
+                            <li>
+                               <i className="fa fa-sign-out-alt" /> 
                             </li>
                         </ul>
                 </nav>

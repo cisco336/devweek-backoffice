@@ -1,3 +1,4 @@
+// Top bar
 nav {
     &.navbar {
         background: $dark;
@@ -12,40 +13,83 @@ nav {
     a, ul {
         margin: 0 1rem;
     }
+    & ul, & ul li {
+        display: flex;
+    }
     & ul {
         & li {
+            align-items: center;
             list-style: none;
-            display: flex;
             padding: 0 1rem;
-            border-right: 1px solid rgba(black, .2);
             cursor: pointer;
-    
-            &:last-child {
-                border: none;
-                padding-right: 0;
-            }
+            border-right: 1px solid $secondary;
+        }
+        & li:last-child {
+            border: none;
+            padding-right: 0;
         }
     }
 }
+
+// Side bar
 .wrapper__grid--nav {
     padding: 0;
     border-right: $border-color;
     & ul {
+        position: relative;
+        margin: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
+        height: 100%;
 
         color: darken($secondary, 15%);
-        li {
-            padding: 1rem;
+        & a {
+            color: inherit;
             width: 100%;
-            & a {
-                color: inherit;
+        }
+        & li {
+            padding: 1rem;
+            & small {
+                margin-left: .5rem;
+                &.no-show {
+                    display: none;
+                }
             }
-
             &:hover {
-                background: $dark;
-                color: $light;
+                background: $light;
+                color: $dark;
+            }
+        }
+
+        /** 
+        / To add space between the settings icon and 
+        / the other icons
+        **/
+        .spacer {
+            flex: 1;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+
+            top: 50%;
+            bottom: 50%;
+            left: 100%;
+            width: 10px;
+            height: 25px;
+            background: white;
+            border: $border-color;
+            border-left: none;
+            border-radius: 0 3px 3px 0;
+
+            & > * {
+                transition: transform .2s ease-out;
+            }
+            
+            &.show > * {
+                transform: rotateZ(180deg);
             }
         }
     } 

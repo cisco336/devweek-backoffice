@@ -2,27 +2,58 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class DashboardNav extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            expand: false
+        };
+
+        this.expandNav = this.expandNav.bind(this);
+    }
+
+    expandNav() {
+        this.setState(state =>({expand: !state.expand}));
+        console.log(this.state.expand);
+    }
+    
     render() {
         return(
-            <div>    
-                <ul>
+            <ul>
+                <Link to="/">
                     <li>
-                        <Link to="/">
-                            <i className="fa fa-home" />
-                        </Link>
+                        <i className="fa fa-home" />
+                        <small className={this.state.expand ? '' : 'no-show'}>
+                            Home
+                        </small>
                     </li>
+                </Link>
+                <Link to="/speakers">
                     <li>
-                        <Link to="/speakers">
-                            <i className="fa fa-users" />
-                        </Link>
+                        <i className="fa fa-users" />
+                        <small className={this.state.expand ? '' : 'no-show'}>
+                            Speakers
+                        </small>
                     </li>
+                </Link>
+                <Link to="/events">
                     <li>
-                        <Link to="/events">
-                            <i className="fa fa-bullhorn" />
-                        </Link>
+                        <i className="fa fa-bullhorn" />
+                        <small className={this.state.expand ? '' : 'no-show'}>
+                            Events
+                        </small>
                     </li>
-                </ul>
-            </div>
+                </Link>
+                <span className={this.state.expand ? 'slider show': 'slider'} onClick={this.expandNav}>
+                    <i className="fa fa-caret-right " />
+                </span>
+                <span className="spacer" />
+                <li>
+                    <i className="fa fa-cog" />
+                    <small className={this.state.expand ? '' : 'no-show'}>
+                        Settings
+                    </small>
+                </li>
+            </ul>
         )
     }
 }
