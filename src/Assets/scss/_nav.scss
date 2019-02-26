@@ -2,7 +2,8 @@ nav {
     &.navbar {
         padding: 0;
     }
-    &.navbar-brand {
+    & .navbar-brand {
+        padding-left: 1rem;
         font-variant: small-caps;
     }
     a, ul {

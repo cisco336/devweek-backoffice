@@ -5,7 +5,7 @@ class DashboardHeader extends React.Component {
         return(
             <div>
                 <nav className="navbar navbar-light bg-light">
-                    <a className="navbar-brand" href="#">Title</a>
+                    <span className="navbar-brand" href="#">Title</span>
                         <ul>
                             <li>
                                 User's menu
