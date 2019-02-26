@@ -1,0 +1,28 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    &__grid {
+        flex: 1 1 auto;
+        display: grid;
+        grid-template-columns: 100px auto;
+
+        &--nav, &--content {
+            padding: 1rem;
+        }
+
+        &--nav {
+            & ul {
+                list-style: none;
+                & li {
+                    cursor: pointer;
+                }
+            }
+            background: lightblue;
+        }
+
+        &--content {
+            background: lightcoral;
+        }
+    }
+}
