@@ -1,8 +1,11 @@
 nav {
     &.navbar {
+        background: $dark;
+        color: $light;
         padding: 0;
     }
     & .navbar-brand {
+        color: inherit !important;
         padding-left: 1rem;
         font-variant: small-caps;
     }
@@ -12,7 +15,7 @@ nav {
     & ul {
         & li {
             list-style: none;
-            display: inline-block;
+            display: flex;
             padding: 0 1rem;
             border-right: 1px solid rgba(black, .2);
             cursor: pointer;
@@ -20,7 +23,30 @@ nav {
             &:last-child {
                 border: none;
                 padding-right: 0;
+            }
         }
     }
-    }
+}
+.wrapper__grid--nav {
+    padding: 0;
+    border-right: $border-color;
+    & ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        color: darken($secondary, 15%);
+        li {
+            padding: 1rem;
+            width: 100%;
+            & a {
+                color: inherit;
+            }
+
+            &:hover {
+                background: $dark;
+                color: $light;
+            }
+        }
+    } 
 }

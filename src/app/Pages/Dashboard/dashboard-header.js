@@ -4,11 +4,13 @@ class DashboardHeader extends React.Component {
     render() {
         return(
             <div>
-                <nav className="navbar navbar-light bg-light">
+                <nav className="navbar navbar-light">
                     <span className="navbar-brand" href="#">Title</span>
                         <ul>
                             <li>
-                                User's menu
+                                <small>
+                                    Welcome "user"
+                                </small>
                             </li>
                         </ul>
                 </nav>

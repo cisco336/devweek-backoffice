@@ -8,17 +8,17 @@ class DashboardNav extends React.Component {
                 <ul>
                     <li>
                         <Link to="/">
-                            Dashboard
+                            <i className="fa fa-home" />
                         </Link>
                     </li>
                     <li>
                         <Link to="/speakers">
-                            Speakers
+                            <i className="fa fa-users" />
                         </Link>
                     </li>
                     <li>
                         <Link to="/events">
-                            Events
+                            <i className="fa fa-bullhorn" />
                         </Link>
                     </li>
                 </ul>
