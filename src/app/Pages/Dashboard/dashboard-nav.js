@@ -7,7 +7,7 @@ class DashboardNav extends React.Component {
             <div>    
                 <ul>
                     <li>
-                            Dashboard
+                        Dashboard
                     </li>
                     <li>
                         Speakers
