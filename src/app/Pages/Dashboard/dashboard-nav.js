@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class DashboardNav extends React.Component {
     render() {
@@ -7,13 +7,19 @@ class DashboardNav extends React.Component {
             <div>    
                 <ul>
                     <li>
-                        Dashboard
+                        <Link to="/">
+                            Dashboard
+                        </Link>
                     </li>
                     <li>
-                        Speakers
+                        <Link to="/speakers">
+                            Speakers
+                        </Link>
                     </li>
                     <li>
-                        Events
+                        <Link to="/events">
+                            Events
+                        </Link>
                     </li>
                 </ul>
             </div>

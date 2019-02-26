@@ -15,21 +15,21 @@ class App extends Component{
 
     render(){
         return(
-            <div className="wrapper">
-                <DashboardHeader/>
-                <BrowserRouter>
-                    <div className="wrapper__grid">
-                        <section className="wrapper__grid--nav">
-                            <DashboardNav />
-                        </section>
-                        <section className="wrapper__grid--content">
-                            <Route path="/" component={Statistics} exact/>
-                            <Route path="/speakers" component={Speakers} exact/>
-                            <Route path="/events" component={Event}exact/>
-                        </section>
-                    </div>
-                </BrowserRouter>
-            </div>
+            <BrowserRouter>
+                <div className="wrapper">
+                    <DashboardHeader/>
+                        <div className="wrapper__grid">
+                            <section className="wrapper__grid--nav">
+                                <DashboardNav />
+                            </section>
+                            <section className="wrapper__grid--content">
+                                <Route path="/" component={Statistics} exact/>
+                                <Route path="/speakers" component={Speakers} exact/>
+                                <Route path="/events" component={Event}exact/>
+                            </section>
+                        </div>
+                </div>
+            </BrowserRouter>
         )
     }
 }
