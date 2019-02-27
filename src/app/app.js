@@ -34,19 +34,19 @@ class App extends Component{
         return(
             <MuiThemeProvider theme={theme}>
             <BrowserRouter>
-                <div className="wrapper">
-                    <DashboardHeader/>
-                        <div className="wrapper__grid">
-                            <section className="wrapper__grid--nav">
-                                <DashboardNav />
-                            </section>
-                            <section className="wrapper__grid--content">
-                                <Route path="/" component={Statistics} exact/>
-                                <Route path="/speakers" component={Speakers} exact/>
-                                <Route path="/events" component={Event}exact/>
-                                <Route path="/settings" component={Settings} exact />
-                            </section>
-                        </div>
+                <div className="wrapper__grid">
+                    <section className="wrapper__grid--header">
+                        <DashboardHeader/>
+                    </section>
+                    <section className="wrapper__grid--nav">
+                        <DashboardNav />
+                    </section>
+                    <section className="wrapper__grid--content">
+                        <Route path="/" component={Statistics} exact/>
+                        <Route path="/speakers" component={Speakers} exact/>
+                        <Route path="/events" component={Event}exact/>
+                        <Route path="/settings" component={Settings} exact />
+                    </section>
                 </div>
             </BrowserRouter>
             </MuiThemeProvider>
