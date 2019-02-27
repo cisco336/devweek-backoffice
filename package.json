@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/Globant-UI-Engineering/devweek-backoffice#readme",
   "dependencies": {
+    "@material-ui/core": "^3.9.2",
+    "@material-ui/icons": "^3.0.2",
     "bootstrap": "^4.3.1",
     "node-sass": "^4.11.0",
     "react": "^16.8.2",
