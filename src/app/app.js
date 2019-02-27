@@ -16,7 +16,7 @@ import Speakers from './Pages/Dashboard/components/speakers';
 import Event from './Pages/Dashboard/components/event';
 import Settings from './Pages/Settings/settings';
 
-
+// Theming
 const theme = createMuiTheme({
     typography: {
         useNextVariants: true,

@@ -10,6 +10,7 @@ import Dashboard from '@material-ui/icons/DashboardOutlined';
 import EventIcon from '@material-ui/icons/Event';
 import RecordVoiceOverOutlined from '@material-ui/icons/RecordVoiceOverOutlined';
 import SettingsOutlined from '@material-ui/icons/SettingsOutlined';
+import PlayArrow from '@material-ui/icons/PlayArrow';
 
 class DashboardNav extends React.Component {
     constructor(props){
@@ -65,9 +66,12 @@ class DashboardNav extends React.Component {
                         </li>
                     </ButtonBase>
                 </NavLink>
+
+                
+                {/* Slider to expand or shrink the side nav */}
                 <Tooltip title="Grow / Shrink" aria-label="Grow / Shrink" placement="right-start">
                     <span className={this.state.expand ? 'slider show': 'slider'} onClick={this.expandNav}>
-                        <i className="fa fa-caret-right " />
+                        <PlayArrow />
                     </span>
                 </Tooltip>
                 <span className="spacer" />
