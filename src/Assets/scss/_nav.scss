@@ -44,12 +44,16 @@
                 position: absolute;
                 background: $dark;
             }
+            & button {
+                width: 100%;
+            }
         }
         & li {
             display: flex;
             align-items: center;
             justify-content: flex-start;
             overflow: hidden;
+            width: 100%;
 
             & div:first-child {
                 display: flex;

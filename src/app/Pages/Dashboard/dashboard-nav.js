@@ -1,13 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 // Material UI
 import Tooltip from '@material-ui/core/Tooltip';
 import ButtonBase from '@material-ui/core/ButtonBase';
 
 // Material UI Icons
-import HomeIcon from '@material-ui/icons/HomeOutlined';
+import Dashboard from '@material-ui/icons/DashboardOutlined';
 import EventIcon from '@material-ui/icons/Event';
+import RecordVoiceOverOutlined from '@material-ui/icons/RecordVoiceOverOutlined';
+import SettingsOutlined from '@material-ui/icons/SettingsOutlined';
 
 class DashboardNav extends React.Component {
     constructor(props){
@@ -27,31 +29,31 @@ class DashboardNav extends React.Component {
     render() {
         return(
             <ul>
-                <Link to="/">
+                <NavLink to="/">
                     <ButtonBase>
                         <li>
                             <div>
-                                <HomeIcon />
+                                <Dashboard />
                             </div>
                             <small className={this.state.expand ? '' : 'no-show'}>
                                 Home
                             </small>
                         </li>
                     </ButtonBase>
-                </Link>
-                <Link to="/speakers">
+                </NavLink>
+                <NavLink to="/speakers">
                     <ButtonBase>
                         <li>
                             <div>
-                                <i className="fa fa-users" />
+                                <RecordVoiceOverOutlined  />
                             </div>
                             <small className={this.state.expand ? '' : 'no-show'}>
                                 Speakers
                             </small>
                         </li>
                     </ButtonBase>
-                </Link>
-                <Link to="/events">
+                </NavLink>
+                <NavLink to="/events">
                     <ButtonBase>
                         <li>
                             <div>
@@ -62,25 +64,25 @@ class DashboardNav extends React.Component {
                             </small>
                         </li>
                     </ButtonBase>
-                </Link>
-                    <Tooltip title="Grow / Shrink" aria-label="Grow / Shrink" placement="right-start">
-                <span className={this.state.expand ? 'slider show': 'slider'} onClick={this.expandNav}>
+                </NavLink>
+                <Tooltip title="Grow / Shrink" aria-label="Grow / Shrink" placement="right-start">
+                    <span className={this.state.expand ? 'slider show': 'slider'} onClick={this.expandNav}>
                         <i className="fa fa-caret-right " />
-                </span>
-                    </Tooltip>
+                    </span>
+                </Tooltip>
                 <span className="spacer" />
-                <Link to="/">
+                <NavLink to="/settings">
                     <ButtonBase>
                         <li>
                             <div>
-                                <i className="fa fa-cog" />
+                                <SettingsOutlined />
                             </div>
                             <small className={this.state.expand ? '' : 'no-show'}>
                                 Settings
                             </small>
                         </li>
                     </ButtonBase>
-                </Link>
+                </NavLink>
             </ul>
         )
     }
