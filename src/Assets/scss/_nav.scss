@@ -29,12 +29,6 @@
             width: 100%;
             text-decoration: none;
             transition: all .2s ease-out;
-            & > * {
-                outline: none;
-            }
-            &:hover {
-                // color: $light;
-            }
             &::after {
                 top: 0;
                 left: 0;
