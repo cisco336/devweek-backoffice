@@ -31,6 +31,18 @@ class Gauges extends React.Component {
                         value="2874"
                         link="Link"
                     />
+                    <GaugeCard
+                        title="Speakers"
+                        subtitle="SubTitle"
+                        value="2874"
+                        link="Link"
+                    />
+                    <GaugeCard
+                        title="Speakers"
+                        subtitle="SubTitle"
+                        value="2874"
+                        link="Link"
+                    />
                 </div>
             </div>
         )

@@ -1,0 +1,34 @@
+.chart-container {
+    padding-top: 2rem;
+}
+.chart-card, .chart-card__content {
+    overflow: visible !important;
+}
+.chart-card {
+    &__content {
+        display: flex;
+        justify-items: center;
+        flex-direction: column;
+
+        &--big-chart {
+            padding: 1rem;
+            color: white;
+            @include linear-gradient($info, bottom right);
+            border-radius: 3px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            font-size: 300%;
+
+            margin: -2rem 0 2rem 0;
+
+            box-shadow:$elevation;
+        }
+
+        &--text {
+            text-align: end;
+        }
+    }
+}

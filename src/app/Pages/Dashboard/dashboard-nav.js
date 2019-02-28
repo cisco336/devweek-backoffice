@@ -30,7 +30,7 @@ class DashboardNav extends React.Component {
     render() {
         return(
             <div>
-                <NavLink to="/">
+                <NavLink exact to="/">
                     <ButtonBase>
                         
                             <div>
@@ -44,30 +44,25 @@ class DashboardNav extends React.Component {
                 </NavLink>
                 <NavLink to="/speakers">
                     <ButtonBase>
-                        
                             <div>
                                 <RecordVoiceOverOutlined  />
                             </div>
                             <small className={this.state.expand ? '' : 'no-show'}>
                                 Speakers
                             </small>
-                        
                     </ButtonBase>
                 </NavLink>
                 <NavLink to="/events">
                     <ButtonBase>
-                        
                             <div>
                                 <EventIcon />
                             </div>
                             <small className={this.state.expand ? '' : 'no-show'}>
                                 Events
                             </small>
-                        
                     </ButtonBase>
                 </NavLink>
 
-                
                 {/* Slider to expand or shrink the side nav */}
                 <Tooltip title="Grow / Shrink" aria-label="Grow / Shrink" placement="right-start">
                     <span className={this.state.expand ? 'slider show': 'slider'} onClick={this.expandNav}>

@@ -14,7 +14,10 @@
     }
     &--nav, &--content {
         grid-row: 2;
-        padding: 1rem;
+    }
+    &--content {
+        // This fix the nav flick when events was clicked
+        padding: 1.5rem;
     }
 
     &--nav {

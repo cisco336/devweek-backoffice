@@ -1,7 +1,6 @@
 import React from 'react';
 import Gauges from './statisticsComponents/gauges';
 import Chart from './statisticsComponents/charts';
-import { string } from 'prop-types';
 
 class Statisctics extends React.Component {
     // Props are hardcoded for now
@@ -16,7 +15,7 @@ class Statisctics extends React.Component {
                     datasets: [{
                         label: 'Speakers',
                         data: [
-                            1323
+                            1323, 765
                         ],
                         backgroundColor: [
                             'blue', 'green', 'red'
