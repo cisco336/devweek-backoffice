@@ -1,0 +1,9 @@
+// Mixin linear Gradient
+@mixin linear-gradient($color, $direction) {
+    background: $color;
+    // background: -moz-linear-gradient(top, $from 0%, $color 100%);
+    // background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$from), color-stop(100%,$color));
+    // background: -webkit-linear-gradient(top, $from 0%,$color 100%);
+    // background: -o-linear-gradient(top, $from 0%,$color 100%);
+    background: linear-gradient(to $direction, $color, lighten($color, 12%));
+}

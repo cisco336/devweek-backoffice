@@ -29,6 +29,20 @@
     }
     &--content {
         overflow-y: auto;
+        & .gauge-content__grid {
+            padding: 1rem 0;
+            display: grid;
+            grid-gap: 1rem;
+
+            grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+        }
+        & .chart-content__grid {
+            padding: 1rem 0;
+            display: grid;
+            grid-gap: 1rem;
+
+            grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+        }
     }
 }
 
