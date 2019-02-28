@@ -11,6 +11,7 @@ import EventIcon from '@material-ui/icons/Event';
 import RecordVoiceOverOutlined from '@material-ui/icons/RecordVoiceOverOutlined';
 import SettingsOutlined from '@material-ui/icons/SettingsOutlined';
 import PlayArrow from '@material-ui/icons/PlayArrow';
+import DescriptionOutlined from '@material-ui/icons/DescriptionOutlined';
 
 class DashboardNav extends React.Component {
     constructor(props){
@@ -59,6 +60,16 @@ class DashboardNav extends React.Component {
                             </div>
                             <small className={this.state.expand ? '' : 'no-show'}>
                                 Events
+                            </small>
+                    </ButtonBase>
+                </NavLink>
+                <NavLink to="/articles">
+                    <ButtonBase>
+                            <div>
+                                <DescriptionOutlined />
+                            </div>
+                            <small className={this.state.expand ? '' : 'no-show'}>
+                                Articles
                             </small>
                     </ButtonBase>
                 </NavLink>

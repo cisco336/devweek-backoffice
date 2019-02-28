@@ -15,6 +15,7 @@ import Statistics from './Pages/Dashboard/components/statistics';
 import Speakers from './Pages/Dashboard/components/speakers';
 import Event from './Pages/Dashboard/components/event';
 import Settings from './Pages/Settings/settings';
+import Articles from './Pages/Dashboard/components/articles';
 
 // Theming
 const theme = createMuiTheme({
@@ -46,6 +47,7 @@ class App extends Component{
                         <Route path="/speakers" component={Speakers} exact/>
                         <Route path="/events" component={Event}exact/>
                         <Route path="/settings" component={Settings} exact />
+                        <Route path="/articles" component={Articles} exact />
                     </section>
                 </div>
             </BrowserRouter>

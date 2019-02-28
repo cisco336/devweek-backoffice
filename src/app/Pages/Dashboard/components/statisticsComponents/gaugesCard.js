@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
@@ -32,7 +33,9 @@ class GaugeCard extends React.Component {
                         </div>
                     </CardContent>
                     <CardActions>
-                        <Button size="small">Learn More</Button>
+                        <Link to={link}>
+                            <Button size="small">Learn More</Button>
+                        </Link>
                     </CardActions>
                 </Card>
             </div>
