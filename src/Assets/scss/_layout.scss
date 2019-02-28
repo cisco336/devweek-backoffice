@@ -3,7 +3,7 @@
     height: 100vh;
     flex: 1 1 auto;
     display: grid;
-    grid-template-columns: max-content auto;
+    grid-template-columns: min-content auto;
     grid-template-rows: min-content auto;
 
     transition: all 1s ease-out;

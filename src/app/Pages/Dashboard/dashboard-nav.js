@@ -29,41 +29,41 @@ class DashboardNav extends React.Component {
     
     render() {
         return(
-            <ul>
+            <div>
                 <NavLink to="/">
                     <ButtonBase>
-                        <li>
+                        
                             <div>
                                 <Dashboard />
                             </div>
                             <small className={this.state.expand ? '' : 'no-show'}>
                                 Home
                             </small>
-                        </li>
+                        
                     </ButtonBase>
                 </NavLink>
                 <NavLink to="/speakers">
                     <ButtonBase>
-                        <li>
+                        
                             <div>
                                 <RecordVoiceOverOutlined  />
                             </div>
                             <small className={this.state.expand ? '' : 'no-show'}>
                                 Speakers
                             </small>
-                        </li>
+                        
                     </ButtonBase>
                 </NavLink>
                 <NavLink to="/events">
                     <ButtonBase>
-                        <li>
+                        
                             <div>
                                 <EventIcon />
                             </div>
                             <small className={this.state.expand ? '' : 'no-show'}>
                                 Events
                             </small>
-                        </li>
+                        
                     </ButtonBase>
                 </NavLink>
 
@@ -77,17 +77,17 @@ class DashboardNav extends React.Component {
                 <span className="spacer" />
                 <NavLink to="/settings">
                     <ButtonBase>
-                        <li>
+                        
                             <div>
                                 <SettingsOutlined />
                             </div>
                             <small className={this.state.expand ? '' : 'no-show'}>
                                 Settings
                             </small>
-                        </li>
+                        
                     </ButtonBase>
                 </NavLink>
-            </ul>
+            </div>
         )
     }
 }
